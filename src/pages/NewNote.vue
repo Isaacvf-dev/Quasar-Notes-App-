@@ -41,8 +41,23 @@ export default defineComponent({
     <ContainerDiv>
       <h3>New Note</h3>
       <form @submit="submit">
-        <q-input class="q-mt-sm" outlined label="Title" />
-        <q-input class="q-mt-sm" outlined label="Description" />
+        <q-input class="q-mt-sm" outlined v-model="note.title" label="Title" />
+        <q-input
+          class="q-mt-sm"
+          outlined
+          v-model="note.description"
+          label="Description"
+          dense
+        />
+
+        <q-card flat bordered class="q-mt-sm">
+          <q-editor v-model="note.content" min-height="5rem" />
+        </q-card>
+
+        <div class="q-mt-md">
+          <q-btn color="grey" to="/" type="reset">Cancel</q-btn>
+          <q-btn class="q-ml-sm" color="positive" type="submit">Create</q-btn>
+        </div>
       </form>
     </ContainerDiv>
   </q-page>
