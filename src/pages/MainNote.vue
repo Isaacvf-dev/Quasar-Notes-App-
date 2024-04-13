@@ -42,6 +42,10 @@ export default {
           <q-card flat bordered class="q-mt-sm">
             <q-editor v-model="note.content" min-height="5rem" />
           </q-card>
+
+          <div class="q-mt-md">
+            <q-btn class="q-ml-sm" color="positive" type="submit">Done</q-btn>
+          </div>
         </form>
       </div>
 
