@@ -2,9 +2,7 @@
   <q-layout view="hHh lpR fFf">
     <q-header elevated class="bg-primary text-white">
       <q-toolbar>
-        <q-toolbar-title @click="router.push(`/`)" class="cursor-pointer">
-          Notes App
-        </q-toolbar-title>
+        <q-btn flat label="Notes App" @click="router.push(`/`)" />
       </q-toolbar>
     </q-header>
 
